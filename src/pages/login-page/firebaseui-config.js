@@ -1,4 +1,5 @@
 import firebase from 'firebase'
+import router from '../../services/router'
 
 export default {
   signInSuccessUrl: '/',
@@ -12,7 +13,7 @@ export default {
   tosUrl: '/tos',
   callbacks: {
     signInSuccess: function (user, credential, redirectUrl) {
-      console.log(user)
+      router.go('/splash')
       // Do not redirect.
       return false
     }

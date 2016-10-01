@@ -1,16 +1,16 @@
 <script>
-  import firebase from 'firebase'
+  import { isSignedIn, getName } from '../../services/current-user'
   export default {
     computed: {
-      username: function () {
-        return firebase.User.displayName || firebase.User.uid
-      }
+      isSignedIn,
+      name: getName
     }
   }
 </script>
 
 <template>
-  <div>Cur User: {{username}}</div>
+  <div v-if="!isSignedIn">Not signed in</div>
+  <div v-if="isSignedIn">Cur User: {{name}}</div>
 </template>
 
 <style scoped>
