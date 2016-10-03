@@ -1,4 +1,4 @@
-import firebase from 'firebase'
+// import firebase from 'firebase'
 
 let user
 
@@ -15,15 +15,15 @@ export function getName () {
   return user.displayName
 }
 
-function handleSignedIn (newUser) {
+/* function handleSignedIn (newUser) {
   user = newUser
 }
 
 function handleSignedOut () {
   user = null
-}
+} */
 
-firebase.auth().onAuthStateChanged(function (newUser) {
+/* firebase.auth().onAuthStateChanged(function (newUser) {
   console.log('newUser', newUser)
   // The observer is also triggered when the user's token has expired and is
   // automatically refreshed. In that case, the user hasn't changed so we should
@@ -32,4 +32,4 @@ firebase.auth().onAuthStateChanged(function (newUser) {
     return
   }
   newUser ? handleSignedIn(newUser) : handleSignedOut()
-})
+}) */

@@ -1,4 +1,4 @@
-import firebase from 'firebase'
+/* import firebase from 'firebase'
 import router from '../../services/router'
 
 export default {
@@ -19,4 +19,4 @@ export default {
     }
   },
   signInFlow: 'popup'
-}
+} */

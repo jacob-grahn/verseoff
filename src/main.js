@@ -1,15 +1,14 @@
 import Vue from 'vue'
 import App from './App'
 import VueFire from 'vuefire'
-import firebase from 'firebase'
-import firebaseConfig from './firebase-config'
 import router from './services/router'
-import routes from './routes'
+import { initFirebase } from './firebase'
 
-firebase.initializeApp(firebaseConfig)
-window.firebase = firebase
-
+initFirebase()
 Vue.use(VueFire)
 
-router.map(routes)
-router.start(App, 'body')
+export const app = new Vue({
+  el: '#verseoff',
+  router,
+  render: h => h(App)
+})

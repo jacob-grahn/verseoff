@@ -9,8 +9,10 @@
 </script>
 
 <template>
-  <div v-if="!isSignedIn">Not signed in</div>
-  <div v-if="isSignedIn">Cur User: {{name}}</div>
+  <div>
+    <div v-if="!isSignedIn">Not signed in</div>
+    <div v-if="isSignedIn">Cur User: {{name}}</div>
+  </div>
 </template>
 
 <style scoped>

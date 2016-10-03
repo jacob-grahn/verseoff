@@ -1,6 +1,6 @@
 # verseoff
 
-> Rap battles for poets
+> Rap Battles for Poets
 
 ## Build Setup
 

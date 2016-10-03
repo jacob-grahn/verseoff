@@ -1,9 +1,3 @@
-<template>
-  <cur-user></cur-user>
-  <big-logo></big-logo>
-  <main-nav></main-nav>
-</template>
-
 <script>
   import BigLogo from './BigLogo'
   import CurUser from './CurUser'
@@ -17,6 +11,14 @@
     }
   }
 </script>
+
+<template>
+  <div>
+    <cur-user></cur-user>
+    <big-logo></big-logo>
+    <main-nav></main-nav>
+  </div>
+</template>
 
 <style scoped>
 </style>
