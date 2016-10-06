@@ -19,6 +19,3 @@
     <main-nav></main-nav>
   </div>
 </template>
-
-<style scoped>
-</style>

@@ -1,4 +1,4 @@
-import firebase from 'firebase'
+/* import firebase from 'firebase'
 
 let ui
 
@@ -8,4 +8,4 @@ export default function () {
     ui = new window.firebaseui.auth.AuthUI(firebase.auth())
   }
   return ui
-}
+} */

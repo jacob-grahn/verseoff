@@ -1,11 +1,9 @@
 <script>
-  export default {
-    replace: false
-  }
+  export default {}
 </script>
 
 <template>
-  <div id="verseoff">
+  <div>
     <router-view></router-view>
   </div>
 </template>
