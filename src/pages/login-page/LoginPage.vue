@@ -1,22 +1,19 @@
 <template>
-  <div id="firebaseui"></div>
+  <div id="firebaseui-container"></div>
 </template>
 
 <script>
-  import getUi from './firebaseui'
+  import firebase from 'firebase'
   import config from './firebaseui-config'
+  let ui
 
   export default {
-    ready: function () {
-      const ui = getUi()
-      ui.start('#firebaseui', config)
+    mounted () {
+      ui = ui || new window.firebaseui.auth.AuthUI(firebase.auth())
+      ui.start('#firebaseui-container', config)
     },
-    destroyed: function () {
-      const ui = getUi()
+    destroyed () {
       ui.reset()
     }
   }
 </script>
-
-<style scoped>
-</style>

@@ -1,18 +1,23 @@
-// import firebase from 'firebase'
+import firebase from 'firebase'
 
 let user
 
 export function isSignedIn () {
-  if (user) {
-    return true
+  if (!firebase.User || !firebase.User.uid) {
+    return false
   }
+  return true
 }
 
 export function getName () {
-  if (!user) {
+  if (!firebase.User) {
     return ''
   }
-  return user.displayName
+  return user.User.displayName
+}
+
+export function setUser (newUser) {
+  user = newUser
 }
 
 /* function handleSignedIn (newUser) {
@@ -24,7 +29,7 @@ function handleSignedOut () {
 } */
 
 /* firebase.auth().onAuthStateChanged(function (newUser) {
-  console.log('newUser', newUser)
+  console.log('onAuthStateChanged', newUser)
   // The observer is also triggered when the user's token has expired and is
   // automatically refreshed. In that case, the user hasn't changed so we should
   // not update the UI.

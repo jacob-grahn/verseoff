@@ -1,11 +1,4 @@
-import firebase from 'firebase'
-
-export function initFirebase () {
-  firebase.initializeApp(config)
-  window.firebase = firebase
-}
-
-const config = {
+export default {
   apiKey: 'AIzaSyAQWbPhpFQEnWX_2Uxm2cFLTlLmRvm-vTU',
   authDomain: 'verseoff.firebaseapp.com',
   databaseURL: 'https://verseoff.firebaseio.com',

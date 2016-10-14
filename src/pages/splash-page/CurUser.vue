@@ -3,15 +3,15 @@
   export default {
     computed: {
       isSignedIn,
-      name: getName
+      getName
     }
   }
 </script>
 
 <template>
   <div>
-    <div v-if="!isSignedIn">Not signed in</div>
-    <div v-if="isSignedIn">Cur User: {{name}}</div>
+    <div v-if="!isSignedIn">Not signed in <router-link to="/login">Sign In</router-link></div>
+    <div v-if="isSignedIn">Cur User: {{getName}}</div>
   </div>
 </template>
 
