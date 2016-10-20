@@ -1,5 +1,8 @@
 <script>
-  export default {}
+  import store from './store'
+  export default {
+    store
+  }
 </script>
 
 <template>
