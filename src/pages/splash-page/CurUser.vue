@@ -1,17 +1,18 @@
 <script>
-  import { isSignedIn, getName } from '../../services/current-user'
   export default {
-    computed: {
-      isSignedIn,
-      getName
+    name: 'CurUser',
+    data () {
+      return this.$store.state.currentUser
     }
   }
 </script>
 
 <template>
   <div>
-    <div v-if="!isSignedIn">Not signed in <router-link to="/login">Sign In</router-link></div>
-    <div v-if="isSignedIn">Cur User: {{getName}}</div>
+    <div v-if="!$store.getters.isLoggedIn">
+      <router-link to="/login">Sign In</router-link>
+    </div>
+    <div v-else>{{displayName}}</div>
   </div>
 </template>
 

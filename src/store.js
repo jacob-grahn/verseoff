@@ -1,7 +1,13 @@
+import Vue from 'vue'
 import Vuex from 'vuex'
-import currentUser from './modules/currentUser'
+import currentUser from './modules/current-user'
 
-export default Vuex.Store({
+Vue.use(Vuex)
+
+export default new Vuex.Store({
+  state: {
+    sue: 1
+  },
   modules: {
     currentUser
   }
